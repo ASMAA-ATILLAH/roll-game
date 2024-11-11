@@ -1,0 +1,133 @@
+/* Game Container */
+.game-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title */
+  h1 {
+    color: #4a90e2;
+  }
+  
+  /* Combat Style Layout */
+  .combat-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  /* Player Cards */
+  .player-card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    background-color: #fffff2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  .player-card.active {
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+    border-color: #4a90e2;
+  }
+  
+  /* Dice Image */
+  .dice-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+  }
+  .dice {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+  }
+  .dice-container:hover .dice {
+    transform: rotate(20deg);
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Buttons */
+  .play-button, .reset-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .play-button {
+    background-color: #4a90e2;
+  }
+  .reset-button {
+    background-color: #e74c3c;
+  }
+  .play-button:hover {
+    background-color: #357abd;
+  }
+  .reset-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Win Message */
+  .win-message {
+    color: #27ae60;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  /* Introduction Section */
+.introduction {
+  background-color: #eef2f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.introduction h2 {
+  color: #4a90e2;
+}
+.introduction h3 {
+  color: #333;
+}
+.introduction ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.introduction p, .introduction li {
+  font-size: 1rem;
+  color: #555;
+}
+
+.winner {
+  animation: flash 0.5s alternate infinite;
+  border: 2px solid gold; /* Optional: Add a border to highlight the winner */
+}
+
+@keyframes flash {
+  0% { background-color: rgba(255, 255, 0, 0.2); }
+  100% { background-color: rgba(255, 255, 0, 0.5); }
+}
